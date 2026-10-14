@@ -39,8 +39,13 @@ Amazon S3 as part of my AWS learning journey.
 
 ## Live Website
 
-[View My
-Website](http://durgesh-aws-static-website-2026.s3-website-us-east-1.amazonaws.com).
+[View live Website](http://durgesh-aws-static-website-2026.s3-website-us-east-1.amazonaws.com).
+
+Note: This website is hosted using the AWS Free Tier for learning
+purposes. The live link may not always be available when you visit it,
+as the AWS resources or hosting configuration may change while I
+continue learning. If the link does not work, please refer to the
+screenshots above to see the website and its AWS configuration.
 ## What I Learned
 
 I learned how to host a static website on Amazon S3, configure bucket
