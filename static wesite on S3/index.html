@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Lakshith Enterprise | Mysuru Thermal &amp; Dining Paper Roll Manufacturer</title>
+  
+  <!-- Tailwind CSS & Custom Theme Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#191c1e", "on-error-container": "#93000a", "inverse-on-surface": "#eff1f3", "secondary": "#0051d5", "inverse-primary": "#bec6e0", "surface-container-highest": "#e0e3e5", "on-secondary": "#ffffff", "secondary-fixed": "#dbe1ff", "tertiary": "#000000", "surface-dim": "#d8dadc", "on-tertiary": "#ffffff", "on-primary-container": "#7c839b", "on-error": "#ffffff", "secondary-container": "#316bf3", "error-container": "#ffdad6", "on-primary": "#ffffff", "surface": "#f7f9fb", "surface-bright": "#f7f9fb", "inverse-surface": "#2d3133", "surface-container-low": "#f2f4f6", "primary-container": "#131b2e", "secondary-fixed-dim": "#b4c5ff", "on-secondary-container": "#fefcff", "primary-fixed-dim": "#bec6e0", "surface-container-lowest": "#ffffff", "background": "#f7f9fb", "on-surface-variant": "#45464d", "surface-tint": "#565e74", "outline": "#76777d", "surface-container": "#eceef0", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "on-secondary-fixed-variant": "#003ea8", "tertiary-fixed": "#6ffbbe", "surface-container-high": "#e6e8ea", "primary": "#000000", "on-primary-fixed": "#131b2e", "on-tertiary-container": "#009668", "outline-variant": "#c6c6cd", "on-tertiary-fixed-variant": "#005236", "on-tertiary-fixed": "#002113", "surface-variant": "#e0e3e5", "primary-fixed": "#dae2fd", "on-surface": "#191c1e", "on-secondary-fixed": "#00174b", "on-primary-fixed-variant": "#3f465c", "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "2rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Inter"], "body-sm": ["Inter"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts & Material Symbols Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+
+  <!-- External Modular Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+
+  <!-- Navigation Header -->
+  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-space-md">
+        <a href="#" class="flex items-center gap-space-sm">
+          <img src="assets/images/logo.png" alt="Lakshith Enterprise Logo" class="h-12 w-auto object-contain">
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-space-xs" id="desktop-nav">
+        <a class="nav-link active" data-section="about" href="#about">About Us</a>
+        <a class="nav-link" data-section="products" href="#products">Products</a>
+        <a class="nav-link" data-section="quality" href="#quality">Quality Standards</a>
+        <a class="nav-link" data-section="calculator" href="#calculator">Bulk Orders</a>
+        <a class="nav-link" data-section="contact" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-space-md">
+        <a class="hidden sm:inline-flex items-center justify-center bg-secondary text-on-secondary px-space-md py-space-sm rounded-lg text-label-lg font-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors" data-path="request-a-quote" onclick="openQuoteModal('General Inquiry')" href="#">Request a Quote</a>
+        <a class="inline-flex items-center justify-center border border-outline text-on-surface px-space-md py-space-sm rounded-lg text-label-lg font-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" href="tel:+91821299XXXX">Call Now</a>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container-high focus:outline-none transition-colors" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+          <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-surface/95 backdrop-blur-xl border-b border-outline-variant/30 px-gutter py-4 shadow-lg transition-all">
+      <div class="flex flex-col gap-2">
+        <a class="nav-link active" data-section="about" href="#about">About Us</a>
+        <a class="nav-link" data-section="products" href="#products">Products</a>
+        <a class="nav-link" data-section="quality" href="#quality">Quality Standards</a>
+        <a class="nav-link" data-section="calculator" href="#calculator">Bulk Orders</a>
+        <a class="nav-link" data-section="contact" href="#contact">Contact</a>
+        <div class="pt-2 border-t border-outline-variant/30 flex flex-col gap-2">
+          <a class="w-full text-center bg-secondary text-on-secondary px-space-md py-space-sm rounded-lg text-label-lg font-label-lg hover:bg-secondary-container transition-colors" onclick="openQuoteModal('General Inquiry'); toggleMobileMenu(false);" href="#">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full bg-surface text-on-surface">
+      
+      <!-- Upper Tier: Hero Section -->
+      <section class="relative overflow-hidden pt-space-xl pb-20 px-gutter max-w-7xl mx-auto w-full" id="about">
+        <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5 pointer-events-none rounded-2xl"></div>
+        <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
+          <div class="lg:col-span-7 flex flex-col gap-space-lg">
+            <div class="inline-flex items-center gap-space-sm bg-surface-container-high px-space-md py-space-xs rounded-full w-fit">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-label-md text-on-surface-variant font-label-md tracking-wide uppercase">Industrial Grade Manufacturing</span>
+            </div>
+            <h1 class="text-headline-lg font-headline-lg text-on-background tracking-tight">
+              Precision-Engineered Thermal &amp; Dining Paper Rolls for High-Volume Businesses
+            </h1>
+            <p class="text-body-lg text-on-surface-variant max-w-2xl">
+              Direct manufacturer supply from Mysuru delivering unmatched tensile strength, lint-free core cuts, and consistent thermal sensitivity for enterprise POS and hospitality operations.
+            </p>
+            <div class="flex flex-wrap items-center gap-space-md pt-2">
+              <a class="bg-secondary text-on-secondary px-space-lg py-space-md rounded-lg text-label-lg font-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-sm" href="#calculator">
+                Get Wholesale Pricing
+              </a>
+              <a class="border border-outline text-on-surface px-space-lg py-space-md rounded-lg text-label-lg font-label-lg hover:bg-surface-container-high transition-all" href="#products">
+                Browse Catalog
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-space-md pt-6 border-t border-outline-variant/30">
+              <div class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined material-symbols-filled text-secondary">verified</span>
+                <div>
+                  <p class="text-label-md font-headline-sm">5.0 Rated</p>
+                  <p class="text-body-sm text-on-surface-variant">Quality Assured</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined material-symbols-filled text-secondary">local_shipping</span>
+                <div>
+                  <p class="text-label-md font-headline-sm">24/7 Dispatch</p>
+                  <p class="text-body-sm text-on-surface-variant">Rapid Logistics</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined material-symbols-filled text-secondary">factory</span>
+                <div>
+                  <p class="text-label-md font-headline-sm">Mysuru Built</p>
+                  <p class="text-body-sm text-on-surface-variant">Direct Plant Supply</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative">
+            <div class="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl bg-surface-container-high flex items-center justify-center">
+              <img class="object-cover w-full h-full" data-alt="Macro close-up photography of pristine white thermal paper rolls stacked neatly in a high-tech automated industrial manufacturing plant in Mysuru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnQtZFSmfJlq7yzBjD2W4Z01lTbfHD9br8IJdnGsjhUM0tDwBqXp3FgvMt9BAXMt58mr0_h-b8JUXM8CROshnjFX3DqKoB92XQfbkYWJ3eoOKwhBwfhmS029OZbdOKrXmKKq60z_NdlOqxukqDrLRucJDOethtlDvJLkBDbWngTPgHQfkYze-X1R3JPXOkBscEU5jiHRM6skVlHAD4kzZvCa0JfJeNK_y-c2rrSNmYBVURK7uOoQ-y0g" alt="Thermal Paper Rolls Manufacturing Plant">
+              <div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-space-md rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-label-md font-headline-sm">ISO 9001:2015 Facility</p>
+                  <p class="text-body-sm text-on-surface-variant">Zero-jam guarantee per master batch</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary text-2xl">workspace_premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Product Showcase -->
+      <section class="py-20 bg-surface-container-low px-gutter" id="products">
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div>
+              <span class="text-label-md text-secondary uppercase tracking-wider font-label-md">Catalog &amp; Specifications</span>
+              <h2 class="text-headline-md font-headline-md text-on-background mt-1">Core Product Showcase</h2>
+            </div>
+            <p class="text-body-md text-on-surface-variant max-w-md">Engineered to exact OEM tolerances for banking, retail, logistics, and hospitality thermal printers and dining establishments.</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-space-lg">
+            <!-- Product 1 -->
+            <div class="bg-surface rounded-2xl p-space-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div>
+                <div class="w-full h-64 rounded-xl overflow-hidden mb-space-lg relative">
+                  <img class="object-cover w-full h-full" data-alt="Industrial thermal POS paper rolls in 80x80mm and 57x40mm dimensions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOywaoeSfaGj8i3vDFhntPQ06weyksEdzfDCoVuMYFkgUUu3zesRJZ3cwLvWcExbw8JFuUzRJai_2AvK7fDhj8gBPEQfcExNtZcsQkzYjNGemqGZy_0ucUsrMfmBdM2T_OkEgzBAgsK6E33AHWICdBZFI8Jx7PLqy4CBE_6PBjmb1Pr_afxYsP3r4JSUzd7Bk6UBXJj5ITRHzFKIvLeUavuVahEmgMrbr83UBOnCtEU9o-Ry5ETc18zQ" alt="Thermal Billing Paper Rolls">
+                  <span class="absolute top-3 right-3 bg-primary text-on-primary text-label-sm px-space-sm py-xs rounded-lg font-label-sm">Best Seller</span>
+                </div>
+                <h3 class="text-headline-sm font-headline-sm text-on-background mb-space-sm">Thermal Billing Paper Rolls</h3>
+                <p class="text-body-md text-on-surface-variant mb-space-lg">High-sensitivity thermal coating delivers deep black impressions with 7-10 years image longevity. Available in 80mm x 80mm, 57mm x 40mm, and custom widths.</p>
+                <div class="grid grid-cols-2 gap-space-md mb-space-lg">
+                  <div class="bg-surface-container-low p-space-md rounded-lg">
+                    <span class="text-label-sm text-on-surface-variant block">Grammage</span>
+                    <span class="text-label-lg font-headline-sm">48 GSM to 65 GSM</span>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-lg">
+                    <span class="text-label-sm text-on-surface-variant block">Core Size</span>
+                    <span class="text-label-lg font-headline-sm">12mm / 25mm Plastic &amp; Paper</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-md pt-4">
+                <button class="flex-1 bg-secondary text-on-secondary py-space-sm rounded-lg text-label-lg font-label-lg hover:bg-secondary-container transition-colors text-center" onclick="openQuoteModal('Thermal Billing Paper Rolls')">Request Sample</button>
+                <a class="px-space-md py-space-sm border border-outline rounded-lg text-label-lg hover:bg-surface-container-high transition-colors" href="#calculator">Calculate Price</a>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-surface rounded-2xl p-space-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+              <div>
+                <div class="w-full h-64 rounded-xl overflow-hidden mb-space-lg relative">
+                  <img class="object-cover w-full h-full" data-alt="Premium dining table paper rolls neatly rolled out on a modern restaurant setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1EwzyEF0mdgbX3zsDEZgrUcIO5ek2a8cDTqftVZikGw58dsJWE7TDT1VovOLoAgWoeeEUjpBydkAZ9cf5_DwoN0dX7VgJUbHJebXJvZJ-FcAqnM8UY1YD5Uo-LjH04fokyvUCf2GVAAiI-XPPIbmNRrhH8b7LG0AF5tYu2cz9llGq1TEHvom0fDa6KnsYuylJSw-Rsg5Z9yezdVoDQNdQND9k1QnNQHqZioW48nxTOjNiWhMQrcMImQ" alt="Dining Table Paper Rolls">
+                  <span class="absolute top-3 right-3 bg-secondary text-on-secondary text-label-sm px-space-sm py-xs rounded-lg font-label-sm">Hospitality Grade</span>
+                </div>
+                <h3 class="text-headline-sm font-headline-sm text-on-background mb-space-sm">Dining Table Paper Rolls</h3>
+                <p class="text-body-md text-on-surface-variant mb-space-lg">Hygienic, food-grade table cover paper engineered for fine dining, banquets, and high-turnover catering businesses. Excellent oil and moisture resistance.</p>
+                <div class="grid grid-cols-2 gap-space-md mb-space-lg">
+                  <div class="bg-surface-container-low p-space-md rounded-lg">
+                    <span class="text-label-sm text-on-surface-variant block">Width Options</span>
+                    <span class="text-label-lg font-headline-sm">90cm, 100cm, 120cm</span>
+                  </div>
+                  <div class="bg-surface-container-low p-space-md rounded-lg">
+                    <span class="text-label-sm text-on-surface-variant block">Surface Finish</span>
+                    <span class="text-label-lg font-headline-sm">Virgin Pulp / Food Safe</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-md pt-4">
+                <button class="flex-1 bg-secondary text-on-secondary py-space-sm rounded-lg text-label-lg font-label-lg hover:bg-secondary-container transition-colors text-center" onclick="openQuoteModal('Dining Table Paper Rolls')">Request Sample</button>
+                <a class="px-space-md py-space-sm border border-outline rounded-lg text-label-lg hover:bg-surface-container-high transition-colors" href="#calculator">Calculate Price</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Profile & Value Pillars -->
+      <section class="py-20 px-gutter max-w-7xl mx-auto w-full" id="quality">
+        <div class="grid lg:grid-cols-12 gap-12 items-center mb-16">
+          <div class="lg:col-span-6 flex flex-col gap-space-md">
+            <span class="text-label-md text-secondary uppercase tracking-wider font-label-md">Enterprise Backbone</span>
+            <h2 class="text-headline-md font-headline-md text-on-background">Rooted in Excellence at Hootagalli Industrial Area, Mysuru</h2>
+            <p class="text-body-lg text-on-surface-variant">
+              Strategically located in the industrial heartland of Karnataka, Lakshith Enterprise combines state-of-the-art slitting and rewinding machinery with stringent quality control protocols. We serve pan-India distributors, major retail chains, and hospitality giants with absolute reliability.
+            </p>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="p-space-xl bg-surface-container-low rounded-2xl flex flex-col gap-space-md">
+              <div class="flex items-center gap-space-md">
+                <span class="material-symbols-outlined material-symbols-filled text-secondary text-3xl">location_on</span>
+                <div>
+                  <p class="text-headline-sm font-headline-sm">Plant Headquarters</p>
+                  <p class="text-body-md text-on-surface-variant">Hootagalli Industrial Area, Hebbalu, Mysuru, Karnataka 570018</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-space-md pt-4 border-t border-outline-variant/30">
+                <div>
+                  <p class="text-headline-md font-headline-md text-secondary">50M+</p>
+                  <p class="text-body-sm text-on-surface-variant">Rolls Delivered Annually</p>
+                </div>
+                <div>
+                  <p class="text-headline-md font-headline-md text-secondary">100%</p>
+                  <p class="text-body-sm text-on-surface-variant">Lint-Free Guarantee</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Column Feature List -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+            <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined material-symbols-filled">fitness_center</span>
+            </div>
+            <h3 class="text-headline-sm font-headline-sm">High-Tear Strength</h3>
+            <p class="text-body-sm text-on-surface-variant">Precision engineered paper density resists accidental tearing during high-speed printing operations.</p>
+          </div>
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+            <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined material-symbols-filled">settings_suggest</span>
+            </div>
+            <h3 class="text-headline-sm font-headline-sm">Universal Compatibility</h3>
+            <p class="text-body-sm text-on-surface-variant">Calibrated core diameters and outer diameters fit seamlessly across Epson, Bixolon, Citizen, and TVS printers.</p>
+          </div>
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+            <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined material-symbols-filled">straighten</span>
+            </div>
+            <h3 class="text-headline-sm font-headline-sm">Consistent Roll Length</h3>
+            <p class="text-body-sm text-on-surface-variant">Computerized tension-control rewinding ensures exact meter counts on every single roll without short-footage.</p>
+          </div>
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+            <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined material-symbols-filled">local_shipping</span>
+            </div>
+            <h3 class="text-headline-sm font-headline-sm">24/7 Supply Reliability</h3>
+            <p class="text-body-sm text-on-surface-variant">Robust warehousing and priority freight partnerships ensure uninterrupted inventory replenishment.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lower Tier: Interactive Bulk Order & Roll Spec Calculator -->
+      <section class="py-20 bg-primary-container text-inverse-on-surface px-gutter relative overflow-hidden" id="calculator">
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col gap-space-xl">
+          <div class="text-center max-w-2xl mx-auto flex flex-col gap-space-sm">
+            <span class="text-label-md text-secondary-fixed-dim uppercase tracking-wider font-label-md">Instant Procurement Estimator</span>
+            <h2 class="text-headline-lg font-headline-lg text-inverse-on-surface">Interactive Bulk Order &amp; Spec Calculator</h2>
+            <p class="text-body-md text-inverse-primary">Configure your roll specifications and volume requirements for instant tier pricing and specification output.</p>
+          </div>
+          <div class="bg-surface text-on-surface rounded-2xl p-space-xl shadow-xl grid lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-7 flex flex-col gap-space-lg">
+              <!-- Product Selector -->
+              <div>
+                <label class="text-label-lg font-label-lg mb-space-sm block">Select Product Category</label>
+                <div class="grid grid-cols-2 gap-space-md">
+                  <button class="p-space-md rounded-lg border-2 border-secondary bg-secondary-fixed/20 text-on-surface font-label-lg text-left transition-all" id="btn-thermal" onclick="setProductType('thermal')" type="button">
+                    <span class="block font-headline-sm">Thermal POS Roll</span>
+                    <span class="text-body-sm text-on-surface-variant">Billing, ATM, Kiosk</span>
+                  </button>
+                  <button class="p-space-md rounded-lg border-2 border-outline-variant bg-surface text-on-surface font-label-lg text-left transition-all" id="btn-dining" onclick="setProductType('dining')" type="button">
+                    <span class="block font-headline-sm">Dining Table Roll</span>
+                    <span class="text-body-sm text-on-surface-variant">Restaurants, Catering</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Width / Dimension Selector -->
+              <div>
+                <label class="text-label-lg font-label-lg mb-space-sm block">Core Width &amp; Size Spec</label>
+                <select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-lg text-on-surface focus:outline-none focus:border-secondary" id="spec-width" onchange="calculatePrice()">
+                  <option value="80x80">80mm x 80mm Standard POS (Box of 50)</option>
+                  <option value="57x40">57mm x 40mm Mobile POS (Box of 100)</option>
+                  <option value="80x60">80mm x 60mm Medium Roll (Box of 50)</option>
+                  <option value="custom">Custom Industrial Slitting (Bulk)</option>
+                </select>
+              </div>
+              <!-- Volume Slider -->
+              <div>
+                <div class="flex justify-between items-center mb-space-sm">
+                  <label class="text-label-lg font-label-lg">Monthly Volume Requirement</label>
+                  <span class="text-headline-sm font-headline-sm text-secondary" id="volume-display">2,500 Units</span>
+                </div>
+                <input class="w-full accent-secondary cursor-pointer" id="volume-slider" max="10000" min="100" oninput="updateVolume(this.value)" step="100" type="range" value="2500">
+                <div class="flex justify-between text-body-sm text-on-surface-variant mt-1">
+                  <span>100 units</span>
+                  <span>5,000 units</span>
+                  <span>10,000+ units (Wholesale Tier)</span>
+                </div>
+              </div>
+            </div>
+            <!-- Calculation Summary Box -->
+            <div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between">
+              <div class="flex flex-col gap-space-md">
+                <h3 class="text-headline-sm font-headline-sm border-b border-outline-variant/30 pb-space-md">Order Specification Summary</h3>
+                <div class="flex justify-between text-body-md">
+                  <span class="text-on-surface-variant">Selected Product:</span>
+                  <span class="font-headline-sm" id="summary-product">Thermal POS Roll</span>
+                </div>
+                <div class="flex justify-between text-body-md">
+                  <span class="text-on-surface-variant">Dimension / Spec:</span>
+                  <span class="font-headline-sm" id="summary-spec">80mm x 80mm Standard POS (Box of 50)</span>
+                </div>
+                <div class="flex justify-between text-body-md">
+                  <span class="text-on-surface-variant">Estimated Unit Rate:</span>
+                  <span class="font-headline-sm text-secondary" id="summary-rate">₹42.75 / unit</span>
+                </div>
+                <div class="flex justify-between text-body-md">
+                  <span class="text-on-surface-variant">Package Tier:</span>
+                  <span class="font-headline-sm text-emerald-600" id="summary-tier">Tier 1 Volume (5% OFF)</span>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+                  <span class="text-label-lg font-label-lg">Estimated Monthly Total:</span>
+                  <span class="text-headline-md font-headline-md text-on-background" id="summary-total">₹1,06,875</span>
+                </div>
+              </div>
+              <div class="pt-6">
+                <button class="w-full bg-[#25D366] text-white py-space-md rounded-lg text-label-lg font-label-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-space-sm shadow-sm" onclick="sendToWhatsApp()">
+                  <span class="material-symbols-outlined">chat</span>
+                  Send Spec Sheet to WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Compatibility & Industry Selector Tabs -->
+      <section class="py-20 px-gutter max-w-7xl mx-auto w-full">
+        <div class="flex flex-col items-center text-center gap-space-md mb-12">
+          <span class="text-label-md text-secondary uppercase tracking-wider font-label-md">Industry Applications</span>
+          <h2 class="text-headline-md font-headline-md text-on-background">Engineered for Your Specific Sector</h2>
+          <p class="text-body-md text-on-surface-variant max-w-xl">Select your industry vertical to explore tailored paper specifications and printer compatibility charts.</p>
+          <!-- Tabs Header -->
+          <div class="flex flex-wrap justify-center gap-space-sm mt-4 bg-surface-container-high p-1.5 rounded-xl">
+            <button class="industry-tab px-space-lg py-space-sm rounded-lg text-label-lg font-label-lg bg-primary text-on-primary transition-all" id="tab-retail" onclick="switchTab('retail')">Retail &amp; Supermarkets</button>
+            <button class="industry-tab px-space-lg py-space-sm rounded-lg text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-all" id="tab-restaurants" onclick="switchTab('restaurants')">Restaurants &amp; Cafes</button>
+            <button class="industry-tab px-space-lg py-space-sm rounded-lg text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-all" id="tab-hotels" onclick="switchTab('hotels')">Hotels &amp; Catering</button>
+            <button class="industry-tab px-space-lg py-space-sm rounded-lg text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-all" id="tab-logistics" onclick="switchTab('logistics')">Logistics &amp; Warehousing</button>
+          </div>
+        </div>
+        <!-- Tab Content Panels -->
+        <div class="industry-panel grid lg:grid-cols-12 gap-12 items-center bg-surface-container-low rounded-2xl p-space-xl" id="panel-retail">
+          <div class="lg:col-span-6 flex flex-col gap-space-md">
+            <span class="text-label-md text-secondary font-headline-sm uppercase">High-Speed POS Billing</span>
+            <h3 class="text-headline-md font-headline-md">Supermarkets &amp; Hypermarkets Retail Solutions</h3>
+            <p class="text-body-lg text-on-surface-variant">Designed for high-frequency checkout counters. Our rolls ensure crisp barcodes, rapid thermal response at high printer speeds, and end-of-roll warning markers.</p>
+            <ul class="flex flex-col gap-space-sm text-body-md text-on-surface-variant">
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Compatible with NCR, IBM, and Epson POS systems</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Lint-free cutting protects print head from thermal degradation</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Bulk shrink-wrapped packaging for moisture protection</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="w-full h-72 rounded-xl overflow-hidden shadow-sm">
+              <img class="object-cover w-full h-full" data-alt="Busy modern supermarket checkout counter with barcode scanner and high-speed thermal receipt printer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9vGIqwq2X9WWkiNJLvcqPAB3qPEaJQT5UFWAsE77hnJ4_6x-YRrIChHBElQF9uh3TqWyfak8JuemfHcubi3QpBPfleihgXRgp39MvXVBJOrJljHFrkDGvo7ls5z9OxAMnihnhcScbtZ4DPslY_1o8V4JOD8YRIj1sMQNlEDpIAkD5q2KJVtjwlSGnTaGsNqcC6hG7_6ODaxMa_4MewVAWUFEgoN9lRIi-RqZu1ZXD4K8jlaLPGa-9lg" alt="Retail Supermarket POS Operations">
+            </div>
+          </div>
+        </div>
+        <div class="industry-panel hidden grid lg:grid-cols-12 gap-12 items-center bg-surface-container-low rounded-2xl p-space-xl" id="panel-restaurants">
+          <div class="lg:col-span-6 flex flex-col gap-space-md">
+            <span class="text-label-md text-secondary font-headline-sm uppercase">Kitchen &amp; Dining Excellence</span>
+            <h3 class="text-headline-md font-headline-md">Restaurants, Cafes &amp; QSR KOT Rolls</h3>
+            <p class="text-body-lg text-on-surface-variant">Kitchen Order Ticket (KOT) rolls resistant to kitchen heat, oil splatter, and moisture. Premium dining table paper rolls ensure immaculate presentation.</p>
+            <ul class="flex flex-col gap-space-sm text-body-md text-on-surface-variant">
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Heat-resistant thermal layers for hot kitchen environments</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Food-safe dining table paper rolls in multiple GSM variants</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Smooth tear-off edges for fast kitchen operations</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="w-full h-72 rounded-xl overflow-hidden shadow-sm">
+              <img class="object-cover w-full h-full" data-alt="Bustling restaurant kitchen with chefs preparing dishes alongside thermal kitchen order tickets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQdJo-SYpqT7_SkKqGbUkzkBzM7aJ1a20awbcEMhWm1eASDFKwPlwearK1wxDS6X6Cgt98d1MDeSgweHVePR8Hy482rupHId-kT-TG1lcYVAtOX_WXT4bsuQAGW8heUora28VLnSUzuVzbdYesMz0d13clne_SN5lidvCB6E5q1dmsatSUh5EtyZUIvPyW1xFaKaJNtgC50cSu0AqxFKERgfOSbSnvKRychLJI0gh4mDFDYwa1XzMfQ" alt="Restaurant Kitchen KOT Printing">
+            </div>
+          </div>
+        </div>
+        <div class="industry-panel hidden grid lg:grid-cols-12 gap-12 items-center bg-surface-container-low rounded-2xl p-space-xl" id="panel-hotels">
+          <div class="lg:col-span-6 flex flex-col gap-space-md">
+            <span class="text-label-md text-secondary font-headline-sm uppercase">Banquet &amp; Event Hospitality</span>
+            <h3 class="text-headline-md font-headline-md">Hotels &amp; Luxury Catering Services</h3>
+            <p class="text-body-lg text-on-surface-variant">Specialized banquet table paper rolls and folio billing paper designed for five-star hospitality standards and high-volume banquet operations.</p>
+            <ul class="flex flex-col gap-space-sm text-body-md text-on-surface-variant">
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Premium virgin pulp table rolls with stain repellent finish</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Long-lasting archival billing records for hotel front desks</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Custom branded core and packaging options available</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="w-full h-72 rounded-xl overflow-hidden shadow-sm">
+              <img class="object-cover w-full h-full" data-alt="Luxury hotel banquet dining setup with pristine white table paper rolls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNLEqRJHeGt8Vm9OwKLdJFPtc0VTzHyh2v0s0BH8cQgKX0F-dGnbelZm5Hq7GgmBl6Z_oqgUm03dvnPeQM_3uIsAieVA6nOFAE-OJYr6BgY4JIvCEOaW5dOeH1-l9I64rI1BFein5mt1YgzI-5UgYPo0deTyNbNXMn0CKShfQ4oppTyG8dV6jXhr7GLwx63y4sZVt3yAzMG7d7bZXDlqEk3DFGrWaGDues7N-xr2yLHLoWlOtz1ecxKw" alt="Hotel Banquet Dining Rolls">
+            </div>
+          </div>
+        </div>
+        <div class="industry-panel hidden grid lg:grid-cols-12 gap-12 items-center bg-surface-container-low rounded-2xl p-space-xl" id="panel-logistics">
+          <div class="lg:col-span-6 flex flex-col gap-space-md">
+            <span class="text-label-md text-secondary font-headline-sm uppercase">Freight &amp; Warehouse Operations</span>
+            <h3 class="text-headline-md font-headline-md">Logistics, Shipping &amp; Warehousing Hubs</h3>
+            <p class="text-body-lg text-on-surface-variant">Heavy-duty thermal rolls for handheld mobile terminals, warehouse label printers, and shipping manifest generation in demanding fulfillment centers.</p>
+            <ul class="flex flex-col gap-space-sm text-body-md text-on-surface-variant">
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> High core rigidity for rugged mobile handheld printers</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Smudge-resistant coating for warehouse handling</li>
+              <li class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary">check_circle</span> Palletized bulk shipments with same-day dispatch</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="w-full h-72 rounded-xl overflow-hidden shadow-sm">
+              <img class="object-cover w-full h-full" data-alt="Modern automated logistics and warehouse distribution center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYD3hmeziLwaSeZluchhtKTIbOLnqUTV1zX-n8dkcP-cXS8CT-3LnJdXQU6YKBCt_d41HQgM_k9LCDbu8BvXD8HJVJER-Z3NOzvtKecPWkZg2n7ETyOxXjxRQlmhBO5km15pcnjKuGYBSxFy-PTRQJfRuRffQia8GsxHl63V9FuPWuPowwWHjT8fznZQA3rEgi-3I4RJzDu_dvtqI8IVoH7JgeYtUymj76iFGCMLTW75z_1URvuKX1pg" alt="Logistics Warehouse Operations">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location & Dispatch Hub Module -->
+      <section class="py-20 bg-surface-container-low px-gutter">
+        <div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div>
+              <span class="text-label-md text-secondary uppercase tracking-wider font-label-md">Global &amp; Pan-India Dispatch</span>
+              <h2 class="text-headline-md font-headline-md text-on-background mt-1">Manufacturing Plant &amp; Logistics Hub</h2>
+            </div>
+            <div class="inline-flex items-center gap-space-sm bg-emerald-500/10 text-emerald-700 px-space-md py-space-sm rounded-lg">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-label-md font-headline-sm">Dispatch Operations Active (24/7)</span>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-12 gap-12">
+            <!-- Left: Address & GSTIN Details -->
+            <div class="lg:col-span-5 bg-surface rounded-2xl p-space-xl shadow-sm flex flex-col justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <h3 class="text-headline-sm font-headline-sm">Lakshith Enterprise Facility</h3>
+                <p class="text-body-md text-on-surface-variant">
+                  Hootagalli Industrial Area, Hebbalu, Mysuru, Karnataka 570018, India
+                </p>
+                <div class="grid grid-cols-2 gap-space-md pt-4 border-t border-outline-variant/30">
+                  <div>
+                    <span class="text-label-sm text-on-surface-variant block">GSTIN</span>
+                    <span class="text-label-lg font-headline-sm">29AAAAA0000A1Z5</span>
+                  </div>
+                  <div>
+                    <span class="text-label-sm text-on-surface-variant block">Plant Code</span>
+                    <span class="text-label-lg font-headline-sm">MYS-HOO-01</span>
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-space-sm">
+                  <span class="text-label-sm text-on-surface-variant block">Freight Connectivity</span>
+                  <p class="text-body-sm text-on-surface-variant">Direct access to NH-275 and Mysuru ring road network enabling 24-hour freight transit to Bangalore, Chennai, Hyderabad, and Kerala corridors.</p>
+                </div>
+              </div>
+              <a class="w-full bg-secondary text-on-secondary py-space-sm rounded-lg text-label-lg font-label-lg text-center hover:bg-secondary-container transition-colors" href="https://maps.google.com/?q=Hootagalli+Industrial+Area+Mysuru" target="_blank" rel="noopener noreferrer">
+                Get Directions to Plant
+              </a>
+            </div>
+            <!-- Right: Interactive Logistics Map Card -->
+            <div class="lg:col-span-7 bg-surface rounded-2xl overflow-hidden shadow-sm flex flex-col">
+              <div class="w-full h-80 relative bg-surface-container-high flex items-center justify-center" data-location="Hootagalli Industrial Area, Hebbalu, Mysuru, Karnataka 570018">
+                <!-- Simulated interactive map overlay indicator -->
+                <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-space-md py-space-sm rounded-lg shadow-sm flex items-center gap-space-sm z-10">
+                  <span class="material-symbols-outlined text-secondary">near_me</span>
+                  <span class="text-label-md font-headline-sm">Hub Live Radar</span>
+                </div>
+                <div class="text-center p-space-md">
+                  <span class="material-symbols-outlined text-secondary text-5xl mb-2">location_on</span>
+                  <p class="font-headline-sm text-on-surface">Hootagalli Plant Radar Active</p>
+                  <p class="text-body-sm text-on-surface-variant">Mysuru Manufacturing &amp; Logistics Complex</p>
+                </div>
+              </div>
+              <div class="p-space-lg bg-surface flex items-center justify-between border-t border-outline-variant/30">
+                <div class="flex items-center gap-space-md">
+                  <span class="material-symbols-outlined text-secondary text-2xl">local_shipping</span>
+                  <div>
+                    <p class="text-label-lg font-headline-sm">Express Freight Fleet</p>
+                    <p class="text-body-sm text-on-surface-variant">Average dispatch time &lt; 4 hours from order confirmation</p>
+                  </div>
+                </div>
+                <span class="text-label-sm bg-surface-container-high px-space-md py-xs rounded-lg font-label-sm">Pan-India Freight</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Direct B2B Inquiry Terminal -->
+      <section class="py-20 px-gutter max-w-7xl mx-auto w-full" id="contact">
+        <div class="bg-primary-container text-inverse-on-surface rounded-3xl p-space-xl lg:p-16 relative overflow-hidden shadow-xl">
+          <div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
+          <div class="grid lg:grid-cols-12 gap-12 relative z-10 items-center">
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <span class="text-label-md text-secondary-fixed-dim uppercase tracking-wider font-label-md">Direct B2B Desk</span>
+              <h2 class="text-headline-lg font-headline-lg text-inverse-on-surface">Initiate Wholesale Procurement</h2>
+              <p class="text-body-lg text-inverse-primary">
+                Connect directly with our Mysuru plant sales management team for custom slitting contracts, white-label packaging, and annual distribution quotas.
+              </p>
+              <div class="flex flex-col gap-space-md pt-4">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/30 flex items-center justify-center text-secondary-fixed-dim">
+                    <span class="material-symbols-outlined">phone</span>
+                  </div>
+                  <div>
+                    <p class="text-label-sm text-inverse-primary">Direct Sales Hotline</p>
+                    <p class="text-label-lg font-headline-sm">+91 (821) 299-XXXX</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-lg bg-secondary/30 flex items-center justify-center text-secondary-fixed-dim">
+                    <span class="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <p class="text-label-sm text-inverse-primary">Wholesale Inquiries</p>
+                    <p class="text-label-lg font-headline-sm">sales@lakshithenterprise.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 bg-surface text-on-surface rounded-2xl p-space-xl shadow-lg">
+              <form class="flex flex-col gap-space-md" id="b2b-form" onsubmit="handleInquirySubmit(event)">
+                <div class="grid sm:grid-cols-2 gap-space-md">
+                  <div>
+                    <label class="text-label-md font-label-md mb-xs block" for="inquiry-name">Full Name</label>
+                    <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" id="inquiry-name" placeholder="Rajesh Kumar" required type="text">
+                  </div>
+                  <div>
+                    <label class="text-label-md font-label-md mb-xs block" for="inquiry-company">Company / Business Name</label>
+                    <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" id="inquiry-company" placeholder="Retail Chain Corp" required type="text">
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-space-md">
+                  <div>
+                    <label class="text-label-md font-label-md mb-xs block" for="inquiry-email">Business Email</label>
+                    <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" id="inquiry-email" placeholder="rajesh@retailchain.com" required type="email">
+                  </div>
+                  <div>
+                    <label class="text-label-md font-label-md mb-xs block" for="inquiry-phone">WhatsApp / Phone Number</label>
+                    <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" id="inquiry-phone" placeholder="+91 98765 43210" required type="tel">
+                  </div>
+                </div>
+                <div>
+                  <label class="text-label-md font-label-md mb-xs block" for="inquiry-msg">Requirement Details &amp; Volume</label>
+                  <textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" id="inquiry-msg" placeholder="Specify roll sizes, monthly quantities, and destination city..." rows="3"></textarea>
+                </div>
+                <button class="w-full bg-secondary text-on-secondary py-space-md rounded-lg text-label-lg font-label-lg hover:bg-secondary-container transition-colors shadow-sm" type="submit">
+                  Submit Wholesale Inquiry
+                </button>
+                <p class="text-body-sm text-emerald-600 text-center hidden font-headline-sm" id="form-success">Inquiry received successfully! Our Mysuru sales desk will contact you within 30 minutes.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating Quick-Connect WhatsApp Tray -->
+      <div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-sm">
+        <div class="bg-surface text-on-surface px-space-md py-space-sm rounded-xl shadow-lg text-label-sm font-label-sm hidden sm:block animate-bounce" id="whatsapp-tooltip">
+          Chat with Mysuru Plant Desk
+        </div>
+        <a class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 transition-transform" href="https://wa.me/919876543210?text=Hello%20Lakshith%20Enterprise,%20I%20would%20like%20to%20inquire%20about%20wholesale%20paper%20rolls." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+          <span class="material-symbols-outlined text-[28px]">chat</span>
+        </a>
+      </div>
+
+      <!-- Quote Sample Modal -->
+      <div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-gutter hidden" id="quote-modal">
+        <div class="bg-surface text-on-surface rounded-2xl max-w-lg w-full p-space-xl shadow-2xl flex flex-col gap-space-lg relative">
+          <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="closeQuoteModal()" type="button" aria-label="Close modal">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div>
+            <span class="text-label-md text-secondary uppercase font-label-md">Sample Request</span>
+            <h3 class="text-headline-md font-headline-md mt-1" id="modal-product-title">Request Product Sample</h3>
+            <p class="text-body-md text-on-surface-variant mt-1">Enter your delivery address to receive complimentary sample rolls from our Mysuru plant.</p>
+          </div>
+          <form class="flex flex-col gap-space-md" onsubmit="handleSampleSubmit(event)">
+            <div>
+              <label class="text-label-md font-label-md mb-xs block">Business Name</label>
+              <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" required type="text">
+            </div>
+            <div>
+              <label class="text-label-md font-label-md mb-xs block">Delivery Address &amp; Pincode</label>
+              <textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" required rows="2"></textarea>
+            </div>
+            <div>
+              <label class="text-label-md font-label-md mb-xs block">Contact Phone / WhatsApp</label>
+              <input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-space-md text-body-md focus:outline-none focus:border-secondary" required type="tel">
+            </div>
+            <button class="w-full bg-secondary text-on-secondary py-space-md rounded-lg text-label-lg font-label-lg hover:bg-secondary-container transition-colors" type="submit">
+              Dispatch Free Sample Kit
+            </button>
+            <p class="text-body-sm text-emerald-600 text-center hidden font-headline-sm" id="sample-success">Sample kit request registered! Dispatched within 24 hours from Mysuru.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="w-full bg-surface-container-low py-space-xl">
+    <div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant text-body-sm">
+      <span>© 2024 Lakshith Enterprise. All rights reserved.</span>
+      <div class="flex gap-space-lg">
+        <a class="hover:text-on-surface" href="#">Privacy Policy</a>
+        <a class="hover:text-on-surface" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Deferred JavaScript Modules -->
+  <script src="js/calculator.js" defer></script>
+  <script src="js/tabs.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

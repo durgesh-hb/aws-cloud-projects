@@ -1,0 +1,18 @@
+/* lakshith-enterprise/css/layout.css */
+/* Navbar, Hero section, grid containers, and footer layouts */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+main {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+footer {
+  width: 100%;
+}

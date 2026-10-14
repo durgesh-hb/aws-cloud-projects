@@ -1,0 +1,45 @@
+/* lakshith-enterprise/css/interactive.css */
+/* Spec calculator, tab switcher, lead form, live map radar, and modal dialogs */
+
+.industry-tab {
+  cursor: pointer;
+}
+
+.industry-panel {
+  transition: opacity 0.2s ease-in-out;
+}
+
+#whatsapp-tooltip {
+  transition: all 0.3s ease;
+}
+
+#quote-modal {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Navigation Link & Active Section Styling */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--on-surface-variant, #45464d);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #0051d5;
+  background-color: rgba(0, 81, 213, 0.08);
+}
+
+.nav-link.active {
+  background-color: #0051d5 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 81, 213, 0.28);
+}
+
