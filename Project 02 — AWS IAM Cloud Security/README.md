@@ -15,7 +15,7 @@ The goal is to allow developers to manage development EC2 instances while preven
 
 ## Architecture
 
-(screenshots/architecture.png)
+![Production Instance Tags](screenshots/architecture.png)
 
 
 ## Resources Created
@@ -36,7 +36,7 @@ The policy contains three main permission rules:
 2. **Allow Describe operations:** Permits specified EC2 read and discovery operations.
 3. **Explicit Deny for tag changes:** Blocks the specified EC2 tag-creation or tag-deletion actions.
 
-An explicit Deny takes precedence over an applicable Allow. Actual permissions depend on the policy's actions, resources, and conditions.
+An explicit Deny takes precedence over an applicable Allow here
 
 ## Screenshots
 
