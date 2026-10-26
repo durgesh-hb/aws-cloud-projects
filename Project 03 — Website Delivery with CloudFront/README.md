@@ -69,19 +69,20 @@ Store your screenshots in the `screenshots/` folder in the repository.
 
 ### 1. CloudFront Distribution
 
-![CloudFront Distribution](screenshots/cloudfront-distribution.png)
+![CloudFront Distribution](screenshots/cloudfront.png)
 
 ### 2. Cache Invalidation Completed
 
-![CloudFront Invalidation Completed](screenshots/cloudfront-invalidation-completed.png)
+![CloudFront Invalidation Completed](screenshots/cache_invalidation.png)
 
 ### 3. Updated Website on S3
 
-![Updated S3 Website](screenshots/s3-updated-website.png)
+![Updated S3 Website](screenshots/s3.png)
 
 ### 4. CloudFront Website Before Invalidation
 
-![CloudFront Before Invalidation](screenshots/cloudfront-before-invalidation.png)
+![CloudFront Before Invalidation](screenshots/cloudfront_update.png)
+
 
 > **Note:** Replace the example screenshot filenames with your actual image filenames.
 
