@@ -13,21 +13,8 @@ I also learned how to update website files in S3 and invalidate the CloudFront c
 
 ## Architecture
 
-```text
-Developer
-    |
-    | Upload index.html
-    v
-Amazon S3 Bucket
-    |
-    | Origin
-    v
-Amazon CloudFront
-    |
-    | HTTPS
-    v
-Website Visitor
-```
+![architecture](screenshots/architecture.png)
+
 
 ## Implementation Steps
 
@@ -88,14 +75,8 @@ Store your screenshots in the `screenshots/` folder in the repository.
 
 ## What I Learned
 
-- How to host static website files in Amazon S3.
 - How CloudFront distributes content to website visitors.
 - How to update an existing S3 object.
 - Why CloudFront may serve cached content after an update.
 - How to create a CloudFront cache invalidation.
-- How to verify website updates after deployment.
 - How S3 and CloudFront work together to deliver website content.
-
-## Conclusion
-
-In this project, I practiced hosting a static website using Amazon S3 and Amazon CloudFront. I also learned how to troubleshoot outdated website content by invalidating the CloudFront cache after updating files in S3.
