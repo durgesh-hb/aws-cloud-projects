@@ -1,4 +1,4 @@
-Highly Available Web Application using AWS ALB and Auto Scaling
+# Highly Available Web Application using AWS ALB and Auto Scaling
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ The application runs on Amazon EC2 instances. The Load Balancer distributes inco
 
 ## Architecture
 
-![AWS Architecture](architecture/architecture.png)
+<img src="screenshots/architecture.png">
 
 ## Implementation Steps
 
@@ -30,7 +30,8 @@ The application runs on Amazon EC2 instances. The Load Balancer distributes inco
 - Attached an Internet Gateway.
 - Configured route tables to allow internet connectivity.
 
-![VPC](screenshots/01-vpc.png)
+<img src="screenshots/vpc.png">
+
 
 ### 2. Configure Security Groups
 
@@ -72,7 +73,7 @@ Created an internet-facing Application Load Balancer named `alb-alb`.
 
 The ALB receives user requests and forwards them to healthy EC2 instances.
 
-![Load Balancer](screenshots/06-load-balancer.png)
+<img src="screenshots/alb_alb.png">
 
 ### 6. Create Auto Scaling Group
 
@@ -104,46 +105,63 @@ CloudWatch monitors CPU utilization and the Auto Scaling Group adjusts the numbe
 
 Opened the Application Load Balancer DNS name in a browser and verified that the Apache-hosted HTML webpage was working.
 
-![Working Application](screenshots/09-working-application.png)
+<img src="screenshots/website.png">
 
 ## Auto Scaling Testing
 
-To test automatic scaling, connected to an EC2 instance using AWS Systems Manager Session Manager.
+To verify automatic scaling, I connected to an EC2 instance using **AWS Systems Manager Session Manager** and generated CPU load using `stress-ng`.
 
-Installed `stress-ng`:
+###  Install stress-ng
 
 ```bash
 sudo dnf install -y stress-ng
 ```
 
-Generated CPU load:
+###  Generate CPU Load
 
 ```bash
 cd /tmp
 stress-ng --cpu 2 --cpu-load 80 --timeout 600s
 ```
 
-### Scale-out Test
+This command generates approximately 80% CPU load using 2 CPU workers for 600 seconds (10 minutes).
 
-When CPU utilization increased, the Auto Scaling Group automatically launched additional EC2 instances.
+###  Scale-out Test
 
-**Observed capacity:**
+When CPU utilization increased, the CloudWatch alarm triggered the target tracking scaling policy. The Auto Scaling Group automatically launched additional EC2 instances.
 
-`1 → 2 → 3 EC2 instances`
+**Observed Capacity:**
 
-### Scale-in Test
+```text
+1 → 2 → 3 EC2 instances
+```
+<img src="screenshots/healthy.png">
+<img src="screenshots/new_instance.png">
 
-After stopping the CPU stress test, CPU utilization decreased.
+The following screenshots show the additional targets becoming healthy and the scaling activities recorded by AWS.
 
-The target tracking policy automatically reduced the number of EC2 instances.
+###  Scale-in Test
 
-**Observed capacity:**
+After CPU utilization decreased, the target tracking policy automatically reduced the desired capacity of the Auto Scaling Group.
 
-`3 → 2 → 1 EC2 instance`
+**Observed Capacity:**
 
-Verified both scaling operations through Auto Scaling Group Activity History and CloudWatch target tracking alarms.
+```text
+3 → 2 → 1 EC2 instance
+```
+<img src="screenshots/draining_box.png">
+<img src="screenshots/delete.png">
 
-![Auto Scaling Activity](screenshots/10-scaling-activity.png)
+The Activity History confirms the scale-in operations. The final Auto Scaling Group state showed one healthy EC2 instance.
+
+### Verification
+
+Verified both scale-out and scale-in operations through:
+
+- Auto Scaling Group Activity History.
+- CloudWatch target tracking alarms.
+- Target Group health status.
+- Auto Scaling Group desired capacity and instance health.
 
 ## Final Result
 
