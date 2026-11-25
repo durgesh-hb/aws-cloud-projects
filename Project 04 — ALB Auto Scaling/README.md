@@ -1,4 +1,4 @@
-# Project 03: Highly Available Web Application using AWS ALB and Auto Scaling
+Highly Available Web Application using AWS ALB and Auto Scaling
 
 ## Project Overview
 
